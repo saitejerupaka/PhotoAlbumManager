@@ -2,10 +2,11 @@ package dataMappers;
 
 import models.Album;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
 
 
-public class AlbumMap {
+public class AlbumMapper {
     private static HashMap<Long, Album> _albums;
 
     private static HashMap<Long, Album> get_albums() {
@@ -16,25 +17,23 @@ public class AlbumMap {
         _albums = albums;
     }
 
-    public static void  initializeAlbums(){
+    public static void initializeAlbums() {
         set_albums(new HashMap<Long, Album>());
     }
 
-    public static void save(Album album)
-    {
+    public void save(Album album) {
         _albums.put(album.getId(), album);
     }
 
-    public static Album get(Long id)
-    {
+    public Album get(Long id) {
         return get_albums().get(id);
     }
 
-    public static Album delete(Long id){
+    public Album delete(Long id) {
         return get_albums().remove(id);
     }
 
-    public static Collection<Album> getAll(){
+    public Collection<Album> getAll() {
         return get_albums().values();
     }
 }

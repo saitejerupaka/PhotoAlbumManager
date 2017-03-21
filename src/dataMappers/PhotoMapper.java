@@ -6,7 +6,7 @@ import models.Photo;
 import java.util.Collection;
 import java.util.HashMap;
 
-public class PhotoMap {
+public class PhotoMapper {
     private static HashMap<Long, Photo> _photos;
 
     public static HashMap<Long, Photo> get_photos() {
@@ -14,7 +14,7 @@ public class PhotoMap {
     }
 
     public static void set_photos(HashMap<Long, Photo> _photos) {
-        PhotoMap._photos = _photos;
+        PhotoMapper._photos = _photos;
     }
 
     public static  void initializePhotos(){

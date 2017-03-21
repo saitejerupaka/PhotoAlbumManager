@@ -1,5 +1,5 @@
-import dataMappers.AlbumMap;
-import dataMappers.PhotoMap;
+import dataMappers.AlbumMapper;
+import dataMappers.PhotoMapper;
 import play.Application;
 import play.GlobalSettings;
 
@@ -8,7 +8,7 @@ public class Global extends GlobalSettings {
 
     @Override
     public void onStart(Application application) {
-        AlbumMap.initializeAlbums();
-        PhotoMap.initializePhotos();
+        AlbumMapper.initializeAlbums();
+        PhotoMapper.initializePhotos();
     }
 }

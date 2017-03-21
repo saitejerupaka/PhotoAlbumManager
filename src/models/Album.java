@@ -1,8 +1,19 @@
 package models;
 
+import java.util.List;
+
 public class Album{
     long id;
     String title;
+    List<Photo> photos;
+
+    public List<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(List<Photo> photos) {
+        this.photos = photos;
+    }
 
     public long getId() {
         return id;
