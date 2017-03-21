@@ -16,14 +16,21 @@ repositories {
     }
 }
 
+dependencies {
+    play "commons-lang:commons-lang:2.6"
+}
+
 model {
     components {
         play {
             platform play: '2.3.6', java:'1.7'
+            sources {
+                extraJava(JavaSourceSet) {
+                    source.srcDir "src/"
+                }
+            }
         }
     }
 }
 
-dependencies {
-    play "commons-lang:commons-lang:2.6"
-}
+
