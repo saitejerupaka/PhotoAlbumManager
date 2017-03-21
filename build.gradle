@@ -1,0 +1,29 @@
+plugins {
+    id 'play'
+    id 'idea'
+}
+
+repositories {
+    jcenter()
+    maven {
+        name "typesafe-maven-release"
+        url "https://repo.typesafe.com/typesafe/maven-releases"
+    }
+    ivy {
+        name "typesafe-ivy-release"
+        url "https://repo.typesafe.com/typesafe/ivy-releases"
+        layout "ivy"
+    }
+}
+
+model {
+    components {
+        play {
+            platform play: '2.3.6', java:'1.7'
+        }
+    }
+}
+
+dependencies {
+    play "commons-lang:commons-lang:2.6"
+}
