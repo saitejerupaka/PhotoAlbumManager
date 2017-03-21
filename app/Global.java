@@ -1,4 +1,5 @@
-import mockDataBase.AlbumStore;
+import dataMappers.AlbumMap;
+import dataMappers.PhotoMap;
 import play.Application;
 import play.GlobalSettings;
 
@@ -7,6 +8,7 @@ public class Global extends GlobalSettings {
 
     @Override
     public void onStart(Application application) {
-        AlbumStore.initializeNew();
+        AlbumMap.initializeAlbums();
+        PhotoMap.initializePhotos();
     }
 }

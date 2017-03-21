@@ -1,11 +1,11 @@
-package mockDataBase;
+package dataMappers;
 
 import models.Album;
 
 import java.util.*;
 
 
-public class AlbumStore{
+public class AlbumMap {
     private static HashMap<Long, Album> _albums;
 
     private static HashMap<Long, Album> get_albums() {
@@ -16,7 +16,7 @@ public class AlbumStore{
         _albums = albums;
     }
 
-    public static void initializeNew(){
+    public static void  initializeAlbums(){
         set_albums(new HashMap<Long, Album>());
     }
 
