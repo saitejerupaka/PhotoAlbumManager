@@ -2,4 +2,8 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                        controllers.AlbumController.createAlbum()
+GET     /album/:id                          controllers.AlbumController.getAlbum(id: Long)
+GET     /album                              controllers.AlbumController.getAllAlbums()
+POST    /album                              controllers.AlbumController.createAlbum()
+DELETE  /album/:id                          controllers.AlbumController.deleteAlbum(id: Long)
+PUT     /album                              controllers.AlbumController.updateAlbum()
