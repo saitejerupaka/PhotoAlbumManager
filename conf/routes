@@ -2,31 +2,39 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-#Album CRUD
+# Album CRUD
+# ~~~~
 GET     /album/:id                          controllers.AlbumController.getAlbum(id: Long)
 POST    /album                              controllers.AlbumController.createAlbum()
 DELETE  /album/:id                          controllers.AlbumController.deleteAlbum(id: Long)
 PUT     /album                              controllers.AlbumController.updateAlbum()
 
-#Add	a	photo	to	an	existing	album
+# Add a photo to an existing album
+# ~~~~
 POST    /album/:id/photo                    controllers.AlbumController.addPhotoToAlbum(id: Long)
 
-#Remove	a	photo	from	an	existing	album
+# Remove a photo from an existing album
+# ~~~~
 DELETE  /album/:albumId/photo/:photoId      controllers.AlbumController.removePhotoFromAlbum(albumId: Long, photoId:Long)
 
-#Return	a	list	of	all	albums,	with	the	photos	associated	with	those	albums.
+# Return a list of all albums, with the photos associated with those	albums.
+# ~~~~
 GET     /album                              controllers.AlbumController.getAllAlbums()
 
-#Return	a	list	of	photos	given	an	album	id.
+
+# Return a list	of photos given	an album id.
+# ~~~~
 GET     /album/:albumId/photo               controllers.AlbumController.getAllPhotos(albumId: Long)
 
 
-#photo CRUD
+# Photo CRUD
+# ~~~~
 GET     /photo/:id                          controllers.PhotoController.getPhoto(id: Long)
 GET     /photo                              controllers.PhotoController.getAllPhotos()
 POST    /photo                              controllers.PhotoController.createPhoto()
 DELETE  /photo/:id                          controllers.PhotoController.deletePhoto(id: Long)
 PUT     /photo                              controllers.PhotoController.updatePhoto()
 
-
+# Init
+# ~~~~
 GET     /init                               controllers.InitController.init()
