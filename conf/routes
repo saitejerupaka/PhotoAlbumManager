@@ -17,7 +17,7 @@ POST    /album/:id/photo                    controllers.AlbumController.addPhoto
 # ~~~~
 DELETE  /album/:albumId/photo/:photoId      controllers.AlbumController.removePhotoFromAlbum(albumId: Long, photoId:Long)
 
-# Return a list of all albums, with the photos associated with those	albums.
+# Return a list of all albums, with the photos associated with those albums.
 # ~~~~
 GET     /album                              controllers.AlbumController.getAllAlbums()
 

@@ -18,6 +18,8 @@ Gradle Tasks:
         -runPlayBinary
 
 
+Runs at **localhost:9000**
+
 Routes can be found at **`conf/routes`**
 
 
@@ -27,6 +29,8 @@ Assumptions:
     on Photo, it doesn't update Albums' photo collection.
     2. There is no database. Used HashMap and initiated it on application start in `Global.java`
     3. Used default logger and it logs to `logs/applicaitons.log`
+    4. Play currently doesn't ignore the ending '/' in request uri. There are workarounds but I hadn't implemented here.
+
 
 
 Code Structure:
