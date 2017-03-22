@@ -2,36 +2,37 @@ package services;
 
 
 import dataMappers.PhotoMapper;
+import models.Album;
 import models.Photo;
 
 import java.util.Collection;
 
 public class PhotoService {
-    private PhotoMapper albumMapper;
+    private PhotoMapper photoMapper;
 
     public PhotoService() {
-        this.albumMapper = new PhotoMapper();
+        this.photoMapper = new PhotoMapper();
     }
 
-    public long createPhoto(Photo album){
-        albumMapper.save(album);
-        return album.getId();
+    public long createPhoto(Photo photo){
+        photoMapper.save(photo);
+        return photo.getId();
     }
 
     public Photo getPhoto(long id){
-        return albumMapper.get(id);
+        return photoMapper.get(id);
     }
 
-    public long updatePhoto(Photo album){
-        albumMapper.save(album);
-        return album.getId();
+    public long updatePhoto(Photo photo){
+        photoMapper.save(photo);
+        return photo.getId();
     }
 
     public Collection<Photo> getAllPhotos(){
-        return albumMapper.getAll();
+        return photoMapper.getAll();
     }
 
     public Photo deletePhoto(long id) {
-        return albumMapper.delete(id);
+        return photoMapper.delete(id);
     }
 }

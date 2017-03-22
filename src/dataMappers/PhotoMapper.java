@@ -21,21 +21,21 @@ public class PhotoMapper {
         set_photos(new HashMap<Long, Photo>());
     }
 
-    public static void save(Photo photo)
+    public  void save(Photo photo)
     {
         _photos.put(photo.getId(), photo);
     }
 
-    public static Photo get(Long id)
+    public Photo get(Long id)
     {
         return get_photos().get(id);
     }
 
-    public static Photo delete(Long id){
+    public Photo delete(Long id){
         return get_photos().remove(id);
     }
 
-    public static Collection<Photo> getAll(){
+    public Collection<Photo> getAll(){
         return get_photos().values();
     }
 

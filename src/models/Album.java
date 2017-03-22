@@ -1,17 +1,39 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Album{
     long id;
     String title;
-    List<Photo> photos;
+    HashSet<Photo> photos = new HashSet<Photo>();
 
-    public List<Photo> getPhotos() {
-        return photos;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Album)) return false;
+
+        Album album = (Album) o;
+
+        if (getId() != album.getId()) return false;
+        return getTitle().equals(album.getTitle());
+
     }
 
-    public void setPhotos(List<Photo> photos) {
+    @Override
+    public int hashCode() {
+        int result = (int) (getId() ^ (getId() >>> 32));
+        result = 31 * result + getTitle().hashCode();
+        return result;
+    }
+
+    public HashSet<Photo> getPhotos() {
+        return photos;
+
+    }
+
+    public void setPhotos(HashSet<Photo> photos) {
         this.photos = photos;
     }
 

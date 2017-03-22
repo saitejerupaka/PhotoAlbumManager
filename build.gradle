@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    play "commons-lang:commons-lang:2.6"
+    play "commons-lang:commons-lang:2.6", "com.typesafe.play:play-java-ws_2.11:2.3.6", "javax.inject:javax.inject:1"
 }
 
 model {
